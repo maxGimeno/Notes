@@ -1,0 +1,21 @@
+* DNS problem: 
+	- degommer resolv.conf et refaire un lien symbolique :
+		sudo rm /etc/resolv.conf
+		sudo ln -s /run/resolvconf/resolv.conf /etc/resolv.conf
+		sudo resolvconf -u
+	- Restart networkmanager : 
+		sudo systemctl restart NetworkManager
+
+
+* Compression commande:
+	tar xzvf < nom_archive >.tar.gz
+
+* Trouver la version et le  pseudo de sa distrib: 
+	cat /etc/lsb-release
+
+* lancer un process hors shell:
+	nohup tilda &
+
+* decoder les noms de symboles dans les segfaults
+	c++filt -t 
+

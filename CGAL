@@ -1,0 +1,18 @@
+* Modifier les Kernel:
+	Chaque classe dans Kernel_23 est une façade pour les classes dans Cartesian/ et Homogeneous/
+	Ces classes là dépendent d'une class Rep qui contient l'implémentation réelle. 
+	C'est donc là qu'il faut appliquer les modifications, puis les propager dans les calsses des kernels. 
+	Et on n'oublie pas la doc, dans Kernel_23/doc cette fois.
+	
+	Un exemple ici: https://github.com/CGAL/cgal/pull/1656/commits
+
+* Ajouter un NP:
+	Prendre exemple sur #3042.
+
+* Modifier ou ajouter des intersections:
+	Y a plein de code partout c'est ultra relou. Voir 
+	- intersection_3_1.h
+	- intersection_3.h
+	- Intersections_traits_3.h
+
+

@@ -1,0 +1,27 @@
+* Pour commencer :
+	sudo systemctl start docker //sur fedora
+	sudo service docker start //sur ubuntu
+
+* Lancer un container existant
+	start [container]
+* Creer une nouvelle image a partir du container
+	docker commit [container-name] 
+* Build une image
+	docker build -t [nom:tag] [chemin du dockerfile]  
+* Lancer l'image
+	docker run --rm -t -i [nom:tag] /bin/bash 
+* Avec MySQL:
+	- setup de mysql : 
+		docker run --rm --name mysql-server -v /wiki_images -p 3306:3306 -e MYSQL_ROOT_PASSWORD='mdp' mysql
+	-setup de mediawiki: 
+		docker run --rm --name mediawiki --link mysql-server:mysql -p 8080:80 -e MEDIAWIKI_DB_PASSWORD='mdp' cgal/mediawiki:test
+	- clean-up : virer toutes les images sans tag
+		sudo docker rmi $(sudo  docker images -q --filter "dangling=true")
+
+	- faire un dump:
+		docker exec [nom du container = mysql-server] sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > [path sur le host = /home/mgimeno/MediaWiki_Image/DB/test_database.sql]
+	- load un dump:
+		 docker exec -i [mysql-server] mysql -u'user' -p'mdp' [wiki_test]< [/home/mgimeno/MediaWiki_Image/DB/test_db.sql]
+	-se greffer à un container pendant qu'il tourne :
+		 docker exec -it [nom du container] bash
+

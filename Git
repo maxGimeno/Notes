@@ -1,0 +1,19 @@
+Pour annuler un push : 
+git push -f [remote repo name] [last valid commit ID ]:[branch name]
+
+pour le rebase : 
+git rebase cgal/master
+… en fait git rebase va prendre chaque commit et essayer de les appliquer sur HEAD les uns apres les autres
+dès qu'il y a un conflict, il s'arrete
+il faut fixer, faire git add
+et ensuite git rebase --continue
+
+
+git diff -> dans un fichier
+patch -p1 <le fichier reapplique le diff
+
+pour clean :  git clean -n -X -d
+le -n fait qu'il te montre ce qu'il va faire
+si tu es OK, tu replace le -n par -f
+
+git log --grep="recherche" pour trouver un commit en fonction de son message

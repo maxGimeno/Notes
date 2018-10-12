@@ -1,0 +1,6 @@
+any word between [ ]:
+	\[\w*\]
+
+example: getVbos\(\)\[\w*\]
+
+

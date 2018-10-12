@@ -1,0 +1,5 @@
+dans cygwin : 
+  source C/CGAL/reference_platforms/[platform voulue]/setup
+  devenv.exe [path_to_sln]
+
+

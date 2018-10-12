@@ -1,0 +1,19 @@
+== MySQL==
+se connecter : 
+mysql -u [utilisateur] -h [host (pour les tests c'est localhost)] -p[password]
+
+lancer une BDD : CREATE DATABASE [db_name] DEFAULT CHARACTER SET 'utf8';
+utiliser une BDD : 
+USE [db_name];
+
+
+
+
+faire un dump:
+docker exec [nom du container = mysql-server] sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > [path sur le host = /home/mgimeno/MediaWiki_Image/DB/test_database.sql]
+load un dump:
+ docker exec -i [mysql-server] mysql -uroot -pplouf [wiki_test]< [/home/mgimeno/MediaWiki_Image/DB/test_db.sql]
+se greffer à un container pendant qu'il tourne :
+ docker exec -it [nom du container] bash
+
+

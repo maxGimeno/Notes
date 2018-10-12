@@ -1,0 +1,3 @@
+Pour patager des fichiers avec VB :
+	 mount -t vboxsf nom_du_dossier_à_partager_tel_que_son_nom_modifié_dans_virtualbox /chemin_du_point_de_montage_dans_le_système_virtuel
+soit : mount -t vboxsf VBShared ~/WarholShared/
