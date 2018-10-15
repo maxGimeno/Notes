@@ -2,4 +2,5 @@ dans cygwin :
   source C/CGAL/reference_platforms/[platform voulue]/setup
   devenv.exe [path_to_sln]
 
+Pour compiler avec visual 2015 dans VS2017 : choisir le generator 2017 et donner en argument -T "v140"
 

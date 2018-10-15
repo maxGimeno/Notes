@@ -1,7 +1,6 @@
 * Modifier les Kernel:
 	Chaque classe dans Kernel_23 est une façade pour les classes dans Cartesian/ et Homogeneous/
-	Ces classes là dépendent d'une class Rep qui contient l'implémentation réelle. 
-	C'est donc là qu'il faut appliquer les modifications, puis les propager dans les calsses des kernels. 
+	Ces classes là dépendent d'une class Rep qui contient une partie de l'implem. 
 	Et on n'oublie pas la doc, dans Kernel_23/doc cette fois.
 	
 	Un exemple ici: https://github.com/CGAL/cgal/pull/1656/commits
