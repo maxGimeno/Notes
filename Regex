@@ -4,3 +4,6 @@ any word between [ ]:
 example: getVbos\(\)\[\w*\]
 
 
+extract a word from a text file in bash:
+awk '/^Create new tag: /{print $4F}' tmp.txt
+$4F represents the 4th field, that's the expression that follows "Create new tag:"

@@ -16,6 +16,23 @@
 * lancer un process hors shell:
 	nohup tilda &
 
-* decoder les noms de symboles dans les segfaults
+* decoder les noms de symboles dans les segfaults (mangled names)
 	c++filt -t 
 
+* mapper les ctrl+arrow : 
+
+
+* Add the following lines to ~/.inputrc (C:\cygwin\home\<username>\.inputrc):
+
+"\e[1;5C": forward-word   # ctrl + right
+"\e[1;5D": backward-word  # ctrl + left 
+When done you can press C-x C-r to re-read the .inputrc file for the current session.
+
+Things to note if you want other similar customisations: Use 5A and 5B for up and down arrows, and 2x for shifted versions.
+
+The "official" key mappings are described in the Bash Reference Manual, but for a quick way to find a key mapping, in bash:
+
+type Ctrl+V
+type the key sequence you are interested in (e.g., Alt+→). This would print ^[[1;3C
+remove the leading ^[ and replace it with \e to make \e[1;3C
+place this value in your .inputrc file.
