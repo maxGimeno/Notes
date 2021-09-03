@@ -17,3 +17,9 @@ le -n fait qu'il te montre ce qu'il va faire
 si tu es OK, tu replace le -n par -f
 
 git log --grep="recherche" pour trouver un commit en fonction de son message
+
+fixer un rerere:
+repartir de 0. Lancer do_merge. git rerere forget path/to/file/to/fix dans le conflit à fixer. Fix le conflict. git commit -a et finir le do_merge.
+
+== récupérer une branche apres un hard reset pushé par erreur == 
+ git reflog

@@ -24,4 +24,6 @@
 		 docker exec -i [mysql-server] mysql -u'user' -p'mdp' [wiki_test]< [/home/mgimeno/MediaWiki_Image/DB/test_db.sql]
 	-se greffer à un container pendant qu'il tourne :
 		 docker exec -it [nom du container] bash
+* Override un entrypoint dans docker run : 
+        ajouter  --entrypoint=/bin/bash avant le -t
 

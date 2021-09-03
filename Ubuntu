@@ -13,6 +13,9 @@
 * Trouver la version et le  pseudo de sa distrib: 
 	cat /etc/lsb-release
 
+* Trouver la version d'un pkg installé:
+        apt show [pkg]
+
 * lancer un process hors shell:
 	nohup tilda &
 
