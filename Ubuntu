@@ -39,3 +39,5 @@ type Ctrl+V
 type the key sequence you are interested in (e.g., Alt+→). This would print ^[[1;3C
 remove the leading ^[ and replace it with \e to make \e[1;3C
 place this value in your .inputrc file.
+
+For ZSH, see the `bindkey`command
